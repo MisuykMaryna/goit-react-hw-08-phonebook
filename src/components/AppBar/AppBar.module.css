@@ -1,0 +1,32 @@
+.header_link {
+    color: #fff;
+    font-size: 20px;
+
+    &.active {
+        color: orange;
+    }
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.headerNav {
+    width: 100%;
+    margin: 0 auto;
+
+    padding: 20px 50px;
+    background-color: #089272;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 15px;
+    box-shadow: rgba(120, 147, 230, 0.4) 0px 7px 5px -5px,
+        rgba(120, 147, 230, 0.3) 0px 14px 5px -5px,
+        rgba(120, 147, 230, 0.2) 0px 21px 5px -5px,
+        rgba(120, 147, 230, 0.1) 0px 25px 5px -5px;
+}
