@@ -1,0 +1,37 @@
+.container {
+    padding: 40px 0;
+}
+.home__form {
+box-sizing: border-box;
+
+    width: 100%;
+    padding: 0px 15px;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+}
+.title {
+font-size: 24px;
+font-weight: 700;
+text-align: center;
+}
+.home__link {
+ max-width: 400px;
+ margin: 0 auto;
+ padding: 20px 30px;
+ border-radius: 10px;
+ box-shadow: rgb(150, 150, 150) 10px 10px 20px;
+background-color: #eddff0
+ }
+
+  & a {
+color: rgb(208, 0, 255);
+}

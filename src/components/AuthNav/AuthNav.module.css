@@ -1,0 +1,22 @@
+.link {
+    padding: 5px 10px;
+
+    transition: color 250ms linear;
+}
+
+& a:hover {
+    color: rgb(28, 144, 190);
+}
+
+& a.active {
+    color: rgb(208, 0, 255);
+    background-color: transparent;
+    border: 2px solid rgb(208, 0, 255);
+    border-radius: 7px;
+    transition: border 250ms linear;
+}
+
+& a.active:hover {
+    border: 2px solid rgb(28, 144, 190);
+
+}

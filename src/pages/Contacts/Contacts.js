@@ -7,7 +7,7 @@ import { ContactList } from 'components/ContactList/ContactList';
 import { selectError, selectIsLoading } from 'redux/contacts/selectors';
 import css from './Contacts.module.css';
 
-export const Contacts = () => {
+ const Contacts = () => {
   const dispatch = useDispatch();
    const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -30,3 +30,4 @@ export const Contacts = () => {
       </div>
    )
   };
+export default Contacts;

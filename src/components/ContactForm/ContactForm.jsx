@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
+import Notiflix from 'notiflix';
 import css from './ContactForm.module.css';
 
 
@@ -27,17 +28,23 @@ export const ContactForm = () => {
         return;
     }
   };
- const includeName = newContact => {
-    return contacts.find(({ name }) => name === newContact);
-  }
 
 const handleSubmit = e => {
-    e.preventDefault();
-  if (includeName(name)) {
-    alert(`${name} is already in contacts`);
-    return;
-  }
-  dispatch(addContact({ name, number }));
+  e.preventDefault();
+
+  if (contacts.find(el => el.name.toLowerCase() === name.toLowerCase())) {
+      return  Notiflix.Notify.warning(`${name} is already in contacts.`);
+    } else if (
+      contacts.find(el => el.number.toLowerCase() === number.toLowerCase())
+    ) {
+      return  Notiflix.Notify.warning(`${number} is already in contacts.`);
+    }
+
+    const newContact = {
+      name,
+      number,
+    };
+  dispatch(addContact(newContact));
     reset();
   };
 

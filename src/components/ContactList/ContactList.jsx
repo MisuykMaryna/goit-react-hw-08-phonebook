@@ -11,11 +11,11 @@ export const ContactList = () => {
   return (
     <ul className={css.contactList}>
       {contacts &&
-        contacts.map(({ id, name,  phone, onClick }) => (
+        contacts.map(({ id, name,  number, onClick }) => (
           <ContactItem key={id}
           id={id}
           name={name}
-          number={ phone }
+          number={  number }
           onClick={() => onClick(id)} />
         ))}
     </ul>
